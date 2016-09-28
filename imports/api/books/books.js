@@ -3,9 +3,9 @@
 import { Mongo } from 'meteor/mongo';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
-// Defining server side collection 
+// Defining server side collection, export as const 
 
-Books = new Mongo.Collection('Books');
+export const Books = new Mongo.Collection('books');
 
 // Defining schema 
 
