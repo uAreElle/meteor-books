@@ -1,8 +1,16 @@
 <template name="bookList">
-		<h3>Books:</h3>
-	{{#each book in books}}
-		<h4>book</h4>
-	{{else}}
-		<h4>no books...</h4>
-	{{/each}}
+	<div class="container">
+			<h3>Books:</h3>
+		{{#each book in books}}
+			<h4>{{book.title}}</h4>
+			<h5>{{book.author}}, {{book.year}}</h5> 
+			<p>{{book.genre}}</p>
+		{{else}}
+			<h4>no books...</h4>
+		{{/each}}
+	</div>
+	
+	<btn id="js-insert-book" class="btn">
+		add a book
+	</btn>
 </template>

@@ -21,3 +21,5 @@ iron:router
 aldeed:simple-schema
 aldeed:collection2
 mdg:validated-method
+fourseven:scss
+materialize:materialize

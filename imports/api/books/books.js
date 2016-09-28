@@ -2,6 +2,7 @@
 
 import { Mongo } from 'meteor/mongo';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
+import faker from 'faker';
 
 // Defining server side collection, export as const 
 
@@ -15,6 +16,18 @@ Books.schema = new SimpleSchema({
 	genre: { type: String },
 	year: { type: Number },
 })
+
+
+const book = {
+        author: `${faker.name.firstName()}
+${faker.name.firstName()}`,
+        title: `${faker.lorem.words()}`,
+        genre: `${faker.lorem.words()}`,
+        year: faker.random.number(),
+};
+
+// Not asked to validate so commented out
+// Books.schema.validate(book);
 
 // Attaching schema 
 

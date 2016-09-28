@@ -9,6 +9,7 @@ export const insertBook = new ValidatedMethod({
     validate: Books.schema.validator(),
 
     run({ title, author, genre, year }) {
+    console.log("inside insertBook");
     // call insert method on Books collection
     // and return result (id of newly inserted book)
     // or throw error if bad args passed
@@ -25,11 +26,12 @@ export const insertBook = new ValidatedMethod({
       author,
       genre,
       year,
-      checked: false,
-      createdAt: new Date(),
+      //createdAt: new Date(),
     }
     // insert new book into Books collection
+    // & returns _id of inserted document
     Books.insert(book);
+    console.log("insert worked");
     
     }
 });
