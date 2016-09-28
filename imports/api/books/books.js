@@ -17,14 +17,14 @@ Books.schema = new SimpleSchema({
 	year: { type: Number },
 })
 
-
-const book = {
+// Not sure where to put from step 9 so pasted here
+/* const book = {
         author: `${faker.name.firstName()}
-${faker.name.firstName()}`,
+      ${faker.name.firstName()}`,
         title: `${faker.lorem.words()}`,
         genre: `${faker.lorem.words()}`,
         year: faker.random.number(),
-};
+}; */
 
 // Not asked to validate so commented out
 // Books.schema.validate(book);

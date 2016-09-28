@@ -4,6 +4,7 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Books } from '/imports/api/books/books.js';
 import './bookList.html';
+import faker from 'faker';
 
 Template.bookList.onCreated(function () {
     this.autorun(() => {
@@ -18,8 +19,17 @@ Template.bookList.helpers({
 });
 
 Template.bookList.events({
-    // changed to btn for testing purposes
-    'click btn'() { //'click #js­insert­book'() {
+
+    'click #js-insert-book'() { 
+
+        const book = {
+          author: `${faker.name.firstName()}
+${faker.name.firstName()}`,
+        title: `${faker.lorem.words()}`,
+        genre: `${faker.lorem.words()}`,
+        year: faker.random.number(),
+
+        };
 
         console.log("You clicked something");
         insertBook.call(book);
